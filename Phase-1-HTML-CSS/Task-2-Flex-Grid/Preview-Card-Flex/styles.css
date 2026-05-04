@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --default: hsl(0, 0%, 95%);
+    --gold: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --green: hsl(179, 100%, 13%);
+    --t-white: hsla(0, 0%, 100%, 0.75);
+}
+
+body{
+    background-color: var(--default);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main{
+    max-width: 950px;
+    width: 100%;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    height: 40px;
+}
+h1{
+    font-family: 'Big Shoulders', sans-serif;
+    font-weight: 700;
+}
+h2{
+    color: var(--default);
+    font-family: 'Big Shoulders', sans-serif;
+    font-weight: 700;
+    padding-top: 20px;  
+}
+p{
+    color: var(--t-white);
+    padding-top: 15px;
+}
+
+button{
+    border-radius: 24px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    padding: 15px 20px;
+}
+
+section{
+    padding: 40px;
+}
+
+.sedan{
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 10px 0 0;
+}
+.sedan button{
+    color: var(--gold);
+    &:hover{
+        background-color: var(--gold);
+        color: var(--default);
+        outline: 1px solid var(--default);
+    }
+}
+
+.suv{
+    background-color: var(--cyan);
+}
+.suv button{
+    color: var(--cyan);
+    &:hover{
+        background-color: var(--cyan);
+        color: var(--default);
+        outline: 1px solid var(--default);
+    }
+}
+
+.luxury{
+    background-color: var(--green);
+    border-radius: 0 0 10px 10px;
+}
+.luxury button{
+    color: var(--green);
+    &:hover{
+        background-color: var(--green);
+        color: var(--default);
+        outline: 1px solid var(--default);
+    }
+}
+
+@media (min-width: 768px) {
+  article { flex-direction: row; }
+  .sedan { border-radius: 10px 0 0 10px; }
+  .suv { border-radius: 0; }
+  .luxury { border-radius: 0 10px 10px 0; }
+  button { margin-top: 50px; }
+}

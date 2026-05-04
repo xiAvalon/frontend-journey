@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <title>Phase 1 | Contact form</title>
+
+  <style>
+    body {
+      background-color: hsl(148, 38%, 91%);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    form{
+      background-color: white;
+      width: 500px;
+      height: 500px;
+      padding: 10px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .messageField{
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Company X</h1>
+  </header>
+
+  <main>
+    <form>
+      <h2>Contact Us</h2>
+
+      <label for="fName">First Name:</label>
+      <input id="fName" type="text" name="firstName" required>
+
+      <label for="lName">Last Name:</label>
+      <input id="lName" type="text" name="lastName" required>
+      
+      <label for="email">Email Address:</label>
+      <input id="email" type="email" name="email" required>
+
+      
+      <fieldset>
+        <legend>Query Type:</legend>
+        
+        <label>
+          <input type="radio" name="queryType" value="general">
+          General Enquiry
+        </label>
+        <label>
+          <input type="radio" name="queryType" value="support">
+          Support Request
+        </label>
+      </fieldset>
+      
+      
+      
+      <!-- Please select a query type -->
+
+      <label class="messageField">
+        Message:
+        <textarea name="message" required rows="4" cols="50"></textarea>
+      </label>
+      
+      <!-- This field is required -->
+
+      
+      <label>
+        <input type="checkbox" name="consent" required>
+        I consent to being contacted by the team
+      </label>
+      <!-- To submit this form, please consent to being contacted -->
+
+      <button type="submit">Submit</button>
+
+      <!-- Message Sent!
+      Thanks for completing the form. We'll be in touch soon! -->
+    </form>
+  </main>
+  
+  
+  <footer>
+    <p>© 2026 Company X</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-500: hsl(263, 55%, 52%);
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 0.1em;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: var(--grey-100);
+}
+
+main{
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.testimonial{
+    box-shadow: 2.5rem 3.75rem 3rem -3rem var(--grey-400);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+.testimonial img{
+    border-radius: 50%;
+    width: 2rem;
+}
+.testimonial h2{
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: 500;
+}
+.testimonial .position{
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1em;
+}
+.testimonial > p:first-of-type{
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+}
+.testimonial > p:last-of-type{
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.bg-purple-500{
+    background: var(--purple-500);
+}
+.bg-grey-400{
+    background: var(--grey-400);
+}
+.bg-dark-blue{
+    background: var(--dark-blue);
+}
+.bg-white{
+    background: var(--white);
+}
+
+.border-img{
+    border: 2px solid var(--purple-300);
+}
+.border-img-4{
+    border: 2px solid var(--purple-500);
+}
+
+.bg-purple-500,
+.bg-grey-400,
+.bg-dark-blue {
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+  main{
+    /* here we need 4 columns, so we repeat the 1fr 4 times (explicit) */
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-col-span-2{
+    grid-column: span 2;
+  }
+  .testimonial:last-child{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
