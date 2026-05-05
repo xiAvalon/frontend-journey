@@ -19,6 +19,18 @@
     --purple-500: hsl(263, 55%, 52%);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 img,
 picture {
   max-width: 100%;
@@ -80,22 +92,22 @@ main{
 }
 
 .bg-purple-500{
-    background: var(--purple-500);
+    background-color: var(--purple-500);
 }
 .bg-grey-400{
-    background: var(--grey-400);
+    background-color: var(--grey-400);
 }
 .bg-dark-blue{
-    background: var(--dark-blue);
+    background-color: var(--dark-blue);
 }
 .bg-white{
-    background: var(--white);
+    background-color: var(--white);
 }
 
-.border-img{
+.border-img-daniel{
     border: 2px solid var(--purple-300);
 }
-.border-img-4{
+.border-img-patrick{
     border: 2px solid var(--purple-500);
 }
 
@@ -103,6 +115,12 @@ main{
 .bg-grey-400,
 .bg-dark-blue {
     color: var(--white);
+}
+
+.quote {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
 }
 
 @media (min-width: 768px) {
