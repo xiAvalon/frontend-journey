@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #89ebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem;
+    color: #ffcb05;
+    -webkit-text-stroke: 2px #3b5ca8;
+    margin-bottom: 10px;
+}
+
+main{
+    max-width: 700px;
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #baf3f3;
+    border-radius: 8px;
+}
+.lookup{
+    margin-top: 15px;
+    display: flex;
+    gap: 4px;
+}
+#pokemon-search{
+    max-width: 200px;
+    width: 100%;
+}
+#pokemon-search,
+#search-btn {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #3b5ca8;
+}
+#search-btn{
+    background-color: #ffcb05;
+    color: #3b5ca8;
+    cursor: pointer;
+}
+#search-btn:hover{
+    background-color: #3b5ca8;
+    color: #ffcb05;
+}
+#search-btn:disabled{
+    cursor: not-allowed;  
+    background-color: #ddd;  
+    color: #ababab;
+}
+
+#result{
+    padding: 20px;
+}
+/* we uppercase the text here instead of in the js file to preserve the original text for screen readers */
+#result h2{
+    text-transform: uppercase;
+}
+
+/* ensures 'loading' doesn't override the hidden rule */
+[hidden] { display: none !important; } 
+#loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+.spinner{
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-radius: 50%;
+    border-top-color: #cc0000;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    to { transform: rotate(360deg); }
+}
+
+#error{
+    color: #cc0000;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
