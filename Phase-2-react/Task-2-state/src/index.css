@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+  margin: 0;
+  font-family: 'Quicksand';
+  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1{
+  color: #f1356d;
+}
+.navbar .links{
+  margin-left: auto;
+}
+.navbar a{
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover{
+  color: #f1356d;
+}
+
+.content{
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.blog-list{
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.blog-preview{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid #fafafa;
+  margin-top: 10px;
+}
+.blog-preview:hover{
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.blog-preview h3{
+  font-size: 20px;
+  color: #f1356d;
+}
+.blog-preview .delete-btn{
+  border: 1px solid #f1356d;
+  padding: 4px;
+  border-radius: 6px;
+  background-color: #fafafa;
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 4px;
+}
+.blog-preview .delete-btn:hover{
+  background-color: #f1356d;
+  color: #fafafa;
+}
