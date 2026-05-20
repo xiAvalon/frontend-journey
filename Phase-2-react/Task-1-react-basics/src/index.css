@@ -37,6 +37,12 @@
   padding: 20px;
 }
 
+.blog-list{
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .blog-preview{
   display: flex;
   flex-direction: column;
@@ -58,6 +64,7 @@
   background-color: #fafafa;
   align-self: flex-end;
   cursor: pointer;
+  margin: 4px;
 }
 .blog-preview .delete-btn:hover{
   background-color: #f1356d;
