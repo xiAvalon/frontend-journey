@@ -4,7 +4,7 @@ function Navbar() {
             <h1>My Blog</h1>
             <div className="links">
                 <a href="/">Home</a>
-                <a href="/create">
+                <a className="disabled">
                     New Blog
                 </a>
             </div>

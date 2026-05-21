@@ -30,6 +30,10 @@
 .navbar a:hover{
   color: #f1356d;
 }
+.navbar .disabled{
+  pointer-events: none;
+  opacity: 0.5;
+}
 
 .content{
   max-width: 600px;
@@ -67,6 +71,20 @@
   margin: 4px;
 }
 .blog-preview .delete-btn:hover{
+  background-color: #f1356d;
+  color: #fafafa;
+}
+
+.home .add-btn{
+  border: 1px solid #f1356d;
+  padding: 4px;
+  border-radius: 6px;
+  background-color: #fafafa;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+.home .add-btn:hover{
   background-color: #f1356d;
   color: #fafafa;
 }

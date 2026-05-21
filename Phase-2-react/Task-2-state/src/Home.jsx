@@ -26,7 +26,7 @@ function Home() {
         <div className="home">
             <BlogList blogs={blogs} title='All Blogs:' onDelete={handleDelete} onUpdate={handleUpdate} />
             <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs: " onDelete={handleDelete} onUpdate={handleUpdate} />
-            <button className="delete-btn" onClick={() => handleAdd({title: 'My Fourth Blog', body: 'This is a test.', author: 'luigi'})}>Add</button>
+            <button className="add-btn" onClick={() => handleAdd({title: 'My Fourth Blog', body: 'This is a test.', author: 'luigi'})}>Add Blog</button>
         </div>
     )
 }
