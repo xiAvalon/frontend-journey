@@ -7,6 +7,7 @@ Blog app that fetches blog data from a local API on mount.
 - Dependency array (empty = run once on mount)
 - Data fetching with loading & error states
 - Conditional rendering based on fetch status
+- useEffect cleanup function
 
 ## Setup
 Requires JSON Server running locally:
