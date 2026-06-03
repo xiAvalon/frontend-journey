@@ -20,7 +20,9 @@ function Home() {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3000/blogs')
+        const controller = new AbortController();
+
+        fetch('http://localhost:3000/blogs', { signal: controller.signal })
             .then(res => {
                 if(!res.ok){
                     throw new Error('Failed to fetch data');
@@ -33,9 +35,13 @@ function Home() {
                 setError(null);
             })
             .catch(err => {
-                setIsPending(false);
-                setError(err.message);
+                if(err.name === 'AbortError') console.log('fetch aborted');
+                else{
+                    setIsPending(false);
+                    setError(err.message);
+                }
             });
+            return () => controller.abort();
     }, []);
 
     return (
