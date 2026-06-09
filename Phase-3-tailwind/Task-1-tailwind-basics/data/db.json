@@ -1,0 +1,23 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "My First Blog",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "author": "mario"
+    },
+    {
+      "id": "2",
+      "title": "My Second Blog",
+      "body": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+      "author": "luigi"
+    },
+    {
+      "id": "3",
+      "title": "My Third Blog",
+      "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.",
+      "author": "mario"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
