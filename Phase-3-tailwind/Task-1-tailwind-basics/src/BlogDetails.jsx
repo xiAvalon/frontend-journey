@@ -18,7 +18,7 @@ function BlogDetails() {
         fetch('http://localhost:3000/blogs/' + id, {
             method: 'DELETE'
         }).then((res) => {
-            if(!res.ok) throw new Error('Fialed to delete blog');
+            if(!res.ok) throw new Error('Failed to delete blog');
             navigate('/');
         }).catch((err) => {
             setActionError(err.message);
@@ -56,23 +56,39 @@ function BlogDetails() {
     }
 
     return (
-        <div className="blog-details">
+        <div>
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {blog && (
-                <article>
-                    <h2>{blog.title}</h2>
-                    <p>Written by: {blog.author}</p>
+                <article className="hover:shadow-md p-5">
+                    <h2 className="text-xl text-[#f1356d] mb-2.5">{blog.title}</h2>
+                    <p>Written by: <span className="underline">{blog.author}</span></p>
                     <div>{blog.body}</div>
                     {actionError && <p>{actionError}</p>}
-                    <button disabled={actionPending} onClick={handleDelete}>Delete</button>
-                    <button disabled={actionPending} onClick={handleEditClick}>Edit</button>
+                    <button 
+                        className="bg-[#f1356d] text-white p-2 rounded-md cursor-pointer mr-2 mt-2.5 hover:bg-[#ed2561]" 
+                        disabled={actionPending} 
+                        onClick={handleDelete}
+                    >
+                        Delete
+                    </button>
+                    <button 
+                        className="bg-[#f1356d] text-white p-2 rounded-md cursor-pointer mr-2 mt-2.5 hover:bg-[#ed2561]" 
+                        disabled={actionPending} 
+                        onClick={handleEditClick}
+                    >
+                        Edit
+                    </button>
 
                     {isEditing && (
-                        <form onSubmit={handleUpdate} className="edit-form">
-                            <input value={editTitle} onChange={(e) => setEditTitle(e.target.value)} />
-                            <textarea value={editBody} onChange={(e) => setEditBody(e.target.value)} />
-                            <button type="submit" disabled={actionPending}>
+                        <form onSubmit={handleUpdate} className="max-w-100 mx-auto my-0 text-center">
+                            <input className="w-full px-2.5 py-1.5 mx-0 my-2.5 border border-[#ddd] block" value={editTitle} onChange={(e) => setEditTitle(e.target.value)} />
+                            <textarea className="w-full px-2.5 py-1.5 mx-0 my-2.5 border border-[#ddd] block" value={editBody} onChange={(e) => setEditBody(e.target.value)} />
+                            <button 
+                                type="submit" 
+                                disabled={actionPending}
+                                className="bg-[#f1356d] text-white p-2 rounded-md cursor-pointer mr-2 mt-2.5 hover:bg-[#ed2561]"
+                            >
                                 {actionPending ? 'Saving...' : 'Save'}
                             </button>
                         </form>

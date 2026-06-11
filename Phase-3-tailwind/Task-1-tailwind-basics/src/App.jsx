@@ -9,7 +9,7 @@ function App() {
     <Router>  
       <div className="App">
         <Navbar />
-        <div className='content'>
+        <div className='max-w-150 my-6 mx-auto p-4 md:my-10 md:p-8'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/create' element={<CreateBlog />} />

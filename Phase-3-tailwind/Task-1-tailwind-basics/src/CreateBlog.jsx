@@ -32,24 +32,27 @@ function CreateBlog() {
     }
 
     return (
-        <div className="create">
-            <h2>Add a New Blog</h2>
+        <div className="max-w-110 my-0 mx-auto text-center p-5 hover:shadow-md">
+            <h2 className="text-xl text-[#f1356d] mb-2.5">Add a New Blog</h2>
             <form onSubmit={handleSubmit}>
-                <label>Blog Title:</label>
+                <label className="text-left block">Blog Title:</label>
                 <input 
+                    className="w-full px-2.5 py-1.5 mx-0 my-2.5 border border-[#ddd] block"
                     type="text" 
                     required 
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
-                <label>Blog Body:</label>
+                <label className="text-left block">Blog Body:</label>
                 <textarea 
+                    className="w-full px-2.5 py-1.5 mx-0 my-2.5 border border-[#ddd] block"
                     required
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                 ></textarea>
-                <label>Blog Author:</label>
+                <label className="text-left block">Blog Author:</label>
                 <select
+                    className="w-full px-2.5 py-1.5 mx-0 my-2.5 border border-[#ddd] block"
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                 >
@@ -57,8 +60,19 @@ function CreateBlog() {
                     <option value="luigi">Luigi</option>
                 </select>
                 {error && <p>{error}</p>}
-                {!isPending && <button>Add Blog</button>}
-                {isPending && <button disabled>Adding Blog...</button>}
+                {!isPending && 
+                    <button 
+                        className="bg-[#f1356d] text-white p-2 rounded-md cursor-pointer mr-2 mt-2.5 hover:bg-[#ed2561]"
+                    >
+                        Add Blog
+                    </button>}
+                {isPending && 
+                    <button 
+                        disabled
+                        className="bg-[#f1356d] text-white p-2 rounded-md cursor-pointer mr-2 mt-2.5 hover:bg-[#ed2561]"
+                    >
+                        Adding Blog...
+                    </button>}
             </form>
         </div>
     )
