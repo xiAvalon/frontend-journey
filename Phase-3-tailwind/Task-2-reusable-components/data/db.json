@@ -1,0 +1,29 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "My First Blog",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "author": "mario"
+    },
+    {
+      "id": "2",
+      "title": "My Second Blog",
+      "body": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+      "author": "luigi"
+    },
+    {
+      "id": "3",
+      "title": "My Third Blog",
+      "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.",
+      "author": "mario"
+    },
+    {
+      "title": "Lorem Ipsum",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non erat vel diam consectetur auctor. Etiam sit amet enim sed diam feugiat suscipit. Nullam finibus porta dolor eget molestie. Etiam venenatis, felis nec porta ullamcorper, magna lorem semper lorem, sed luctus urna lacus non diam. Vestibulum pharetra nisi dui, id finibus est ultricies et. Nulla facilisis neque nunc, eget molestie risus hendrerit in. Ut fringilla tincidunt dolor in consequat. Morbi a metus lectus. Etiam sodales erat augue, nec ultricies dui tristique nec.",
+      "author": "luigi",
+      "id": "z3JBtZEkOaU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
