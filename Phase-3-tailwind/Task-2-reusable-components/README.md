@@ -14,7 +14,7 @@ npm run dev
 \`\`\`
 
 ## Concepts Learned
-The main thing was figuring out how to design a props API for reusable components — what to name explicitly (`variant`, `disabled`) vs. what to just forward with `...rest`. Conditional styling with a variant map, polymorphic components via an `as` prop, and keeping spacing (margins) out of the component itself so it stays usable in different layouts.
+The main thing was figuring out how to design a props API for reusable components — what to name explicitly (`variant`) vs. what to just forward with `...rest`. Conditional styling with a variant map, polymorphic components via an `as` prop, and keeping spacing (margins) out of the component itself so it stays usable in different layouts.
 
 ## Notes
 - Added a `danger` variant for Delete so the destructive action looks different

@@ -1,4 +1,4 @@
-function Button({children, disabled, variant='primary', ...rest}) {
+function Button({children, variant='primary', ...rest}) {
     const styles = {
         primary: 'bg-[#f1356d] hover:bg-[#ed2561]',
         secondary: 'bg-gray-400 hover:bg-gray-500',
@@ -6,8 +6,7 @@ function Button({children, disabled, variant='primary', ...rest}) {
     }
 
     return (
-        <button 
-            disabled={disabled} 
+        <button
             className={`${styles[variant]} text-white p-2 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
             {...rest}
         >
