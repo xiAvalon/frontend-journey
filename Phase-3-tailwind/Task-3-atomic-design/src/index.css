@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply no-underline p-1.5 hover:text-[#f1356d];
+  }
+}
