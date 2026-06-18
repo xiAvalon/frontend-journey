@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --brand: #f1356d;
+  --brand-hover: #ed2561;
+  --surface: #ffffff;
+  --paragraph: #1a1a1a;
+  --divider: #f2f2f2;
+  --input: #ddd;
+  color-scheme: light;
+}
+
+.dark {
+  --surface: #1a1a1a;
+  --paragraph: #f1f1f1;
+  --divider: #2a2a2a;
+  --input: #3a3a3a;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-surface: var(--surface);
+  --color-paragraph: var(--paragraph);
+  --color-divider: var(--divider);
+  --color-input: var(--input);
+}
+
+@layer base {
+  body {
+    font-family: 'Quicksand', sans-serif;
+
+    /* The colors here are applied by default, but the point is to make it a controlled explicit value */
+    @apply bg-surface text-paragraph;
+  }
+
+  option {
+    background-color: var(--surface);
+    color: var(--paragraph);
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply no-underline p-1.5 hover:text-brand;
+  }
+}
