@@ -1,6 +1,6 @@
-# Task 3 — Atomic Design
+# Task 4: Theming with Tailwind CSS v4
 
-Refactored the app into the atomic design hierarchy.
+A blog app supporting dark mode theming.
 
 ## Setup
 Requires JSON Server running locally:
@@ -14,13 +14,9 @@ npm run dev
 \`\`\`
 
 ## Concepts Learned
-Brad Frost's Atomic Design methodology:
-- Atoms — smallest building blocks (Button, Input)
-- Molecules — small groups of atoms working together (Field = Label + Input)
-- Organisms — larger, distinct sections built from molecules/atoms (Navbar, BlogList)
-- Templates — page-level layout/structure (none)
-- Pages — templates filled with real content (my routed views)
-
-## Notes
-- Created a field component which combines both input and label for better readability and cleaner code.
-- Skipped the templates folder as the app is relatively small, so kept the layout inside app.jsx without it feeling messy.
+- Defining a custom theme using CSS variables in `index.css`
+- Mapping CSS variables to Tailwind color tokens via `@theme inline` to avoid hardcoded colors
+- Toggling dark mode by adding a `.dark` class to `<html>` via `document.documentElement`
+- Using `@custom-variant dark` to apply dark mode styles with the `dark:` prefix
+- `color-scheme` to style native browser controls (inputs, scrollbars) in dark mode
+- Explicit `option` background/color styling to fix native select dropdown visibility in dark mode
